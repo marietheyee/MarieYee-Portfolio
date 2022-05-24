@@ -1,45 +1,90 @@
 * {
     box-sizing: border-box;
   }
+
+  h1 {
+    font-size: xx-large;
+    font-weight:900;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  }
   
   body {
-    font-family: Arial;
+    font-family: Palatino;
     margin: 0;
+  }
+
+  header {
+    padding: 20px;
+    text-align: center;
+    background: lavender;
+    color: navy;
+  }
+
+  nav {
+    display: flex;
+    background-color: blanchedalmond;
+   
+  }
+
+  nav a {
+    color: brown;
+    padding: 15px 20px;
+    text-align: center;
   }
   
   main {
     display: flex;
-    /* Forces elements to the next line if they don't fit */
     flex-wrap: wrap;
-    margin-top: 2%;
   }
   
-  .main-header {
-    display: flex;
-    /* Forces elements to the next line if they don't fit */
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 60px;
-    background: #13293d;
-    color: #fff;
-  }
+ aside {
+   flex: 1;
+   background-color: peachpuff;
+   padding: 80px;
+   text-align: center;
+ }
+
+ footer {
+   padding: 20px;
+   text-align: center;
+   background: lavender;
+   color: navy;
+ }
   
-  .card {
-    flex: 1 0 0;
-    padding: 10px;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
-  }
-  
-  .card header {
+  .favorites {
+    flex: 4;
+    background-color: lightgrey;
     padding: 20px;
-    background: #13293d;
-    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  
+
+  .card {
+    border-style: dotted;
+    border-width: 1px;
+    border-radius: 8px;
+    padding: 10px;
+    flex: 0 0 400px
+    
+  }
+
+  .card header {
+    padding: 15px;
+  }
+
+  .card p {
+    text-align: center;
+  }
+
   .card img {
     width: 100%;
-    min-width: 400px;
   }
-  
+ 
+  @media screen and (max-width: 768px) {
+    main,
+    nav {
+      flex-direction: column;
+    }
+    
+  }
