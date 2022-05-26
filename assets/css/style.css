@@ -11,25 +11,28 @@
   body {
     font-family: Palatino;
     margin: 0;
+    font-size: large;
   }
 
   header {
     padding: 20px;
     text-align: center;
     background: lavender;
+    background-image: linear-gradient(45deg, darkgray, white);
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 25px;
     color: navy;
   }
 
-  nav {
-    display: flex;
-    background-color: blanchedalmond;
-   
-  }
-
   nav a {
-    color: brown;
-    padding: 15px 20px;
-    text-align: center;
+    font-family: arial;
+    color: navy;
+    font-size: large;
+    font-weight: bold;
   }
   
   main {
@@ -40,7 +43,7 @@
  aside {
    flex: 1;
    background-color: peachpuff;
-   padding: 80px;
+   padding: 15px;
    text-align: center;
  }
 
@@ -53,7 +56,7 @@
   
   .favorites {
     flex: 4;
-    background-color: lightgrey;
+    background-color: slategray;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -65,12 +68,15 @@
     border-width: 1px;
     border-radius: 8px;
     padding: 10px;
-    flex: 0 0 400px
+    flex: 0 0 400px;
+    margin-bottom: 1%;
     
   }
 
   .card header {
     padding: 15px;
+    position: relative;
+    margin-top: 25px;
   }
 
   .card p {
@@ -79,6 +85,8 @@
 
   .card img {
     width: 100%;
+    height: 80%;
+    padding: 5%;
   }
  
   @media screen and (max-width: 768px) {
